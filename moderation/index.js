@@ -5,6 +5,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.post('/events', (req, res) => {
+    console.log(`Received Event ${req.body.type}`)
     const {type, data} = req.body;
     if (type === "CommentCreated") {
         const status = data.content.includes('orange') ? 'rejected' : 'approved';

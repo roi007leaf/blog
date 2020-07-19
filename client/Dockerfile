@@ -1,19 +1,15 @@
-FROM node:12.16.0-alpine
+FROM node:alpine
 
-# set working directory
+# Add the following line
+#ENV CI=true
+
 WORKDIR /app
-
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
-
-# install app dependencies
 COPY package.json ./
-COPY package-lock.json ./
-RUN npm install --silent
-RUN npm install react-scripts@3.4.1 -g --silent
+RUN npm install
+COPY ./ ./
 
-# add app
-COPY . ./
-
-# start app
 CMD ["npm", "start"]
+
+
+
+
