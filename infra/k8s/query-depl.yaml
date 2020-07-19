@@ -19,12 +19,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: 'query-clusterip-srv'
+  name: query-clusterip-srv
 spec:
   selector:
-    app: 'query'
+    app: query
   ports:
-    - name: 'query'
+    - name: query
       protocol: TCP
       port: 4002
       targetPort: 4002

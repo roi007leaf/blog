@@ -15,18 +15,16 @@ spec:
       containers:
         - name: client
           image: roi007leaf/client
-          imagePullPolicy: Always
-      restartPolicy: Always
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: 'client-clusterip-srv'
+  name: client-clusterip-srv
 spec:
   selector:
-    app: 'client'
+    app: client
   ports:
-    - name: 'client'
+    - name: client
       protocol: TCP
       port: 3000
       targetPort: 3000

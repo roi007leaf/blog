@@ -19,12 +19,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: 'event-bus-srv'
+  name: event-bus-srv
 spec:
   selector:
-    app: 'event-bus'
+    app: event-bus
   ports:
-    - name: 'event-bus'
+    - name: event-bus
       protocol: TCP
       port: 4005
       targetPort: 4005

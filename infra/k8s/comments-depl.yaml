@@ -19,12 +19,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: 'comments-clusterip-srv'
+  name: comments-clusterip-srv
 spec:
   selector:
-    app: 'comments'
+    app: comments
   ports:
-    - name: 'comments'
+    - name: comments
       protocol: TCP
       port: 4001
       targetPort: 4001
